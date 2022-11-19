@@ -29,3 +29,17 @@ Caso 06 - Manipulando valores em tabela
     Acessar a página "/tables"
     Verificar valor ao selecionar a linha 
     Descobre linha pelo texto chave e valida as informações 
+
+Caso 07 - Efetuar login com sucesso e validar mensagem de boas vindas
+    Acessar a página "/login"
+    Digitar login
+    Digitar senha
+    Clicar no botão Login
+    Validar mensagem de boas vindas
+
+Caso 08 - Efetuar login com senha inválida
+    Acessar a página "/login"
+    Digitar login
+    Digitar senha inválida
+    Clicar no botão Login
+    Validar mensagem de senha inválida
