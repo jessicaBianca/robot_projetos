@@ -27,4 +27,5 @@ Caso 05 - Manipular dropdown list (por value)
 
 Caso 06 - Manipulando valores em tabela 
     Acessar a página "/tables"
-    
+    Verificar valor ao selecionar a linha 
+    Descobre linha pelo texto chave e valida as informações 

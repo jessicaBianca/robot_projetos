@@ -38,3 +38,13 @@ Selecionar na lista a opção Steve Rogers por value
     Select From List By Value    id=dropdown    1
     ${SELECTED}    Get Selected List Value      id=dropdown
     Should Be Equal     ${SELECTED}    1   
+
+Verificar valor ao selecionar a linha 
+    Table Row Should Contain    id=actors    1    Robert Downey Jr	
+
+
+#valores_alterando_constantemente_melhor_metodo_texto_chave
+Descobre linha pelo texto chave e valida as informações    
+    ${TXT_INSTAGRAM}    Get WebElement    //td[contains(.,'@robertdowneyjr')]
+    #Log To Console    ${TXT_INSTAGRAM.text}
+    Should Contain      ${TXT_INSTAGRAM.text}    @robertdowneyjr
