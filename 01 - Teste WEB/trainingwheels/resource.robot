@@ -8,6 +8,7 @@ ${DROPDOWN_NATASHA}      //option[@value='4'][contains(.,'Natasha Romanoff')]
 ${BTN_LOGIN}             //button[@class='radius btn-login'][contains(.,'Login')]
 ${MENSAGEM_POS_LOGADO}   //div[@class='flash success'][contains(.,'Olá, Tony Stark. Você acessou a área logada!')]
 ${MSG_SENHA_INVALIDA}    //div[@class='flash error'][contains(.,'Senha é invalida!')]
+${TEXTO_CHAVE}           //td[contains(.,'@robertdowneyjr')]
 
 
 *** Keywords ***
@@ -51,7 +52,7 @@ Verificar valor ao selecionar a linha
 
 #valores_alterando_constantemente_melhor_metodo_texto_chave
 Descobre linha pelo texto chave e valida as informações    
-    ${TXT_INSTAGRAM}    Get WebElement    //td[contains(.,'@robertdowneyjr')]
+    ${TXT_INSTAGRAM}    Get WebElement    ${TEXTO_CHAVE}
     #Log To Console    ${TXT_INSTAGRAM.text}
     Should Contain      ${TXT_INSTAGRAM.text}    @robertdowneyjr
 
@@ -66,6 +67,7 @@ Digitar senha inválida
 
 Clicar no botão Login
     Click Element    ${BTN_LOGIN}
+
 Validar mensagem de boas vindas
     Wait Until Element Is Visible    ${MENSAGEM_POS_LOGADO}
     ${MSG}    Get WebElement    ${MENSAGEM_POS_LOGADO}   
